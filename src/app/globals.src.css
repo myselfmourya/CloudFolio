@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f5f8;
+  --foreground: #09090b;
+  --card-bg: #ffffff;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+}
+
+@theme {
+  --font-serif-display: var(--font-serif-display), "DM Serif Display", "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-geometric: var(--font-geometric), "Plus Jakarta Sans", "Outfit", "Space Grotesk", system-ui, sans-serif;
+  --font-body: var(--font-body), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.font-serif-display {
+  font-family: var(--font-serif-display);
+}
+
+.font-geometric {
+  font-family: var(--font-geometric);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Minimalist Small Black Dots Background on Full Application */
+body {
+  background-color: #f4f5f8;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.14) 1.25px, transparent 1.25px);
+  background-size: 22px 22px;
+  background-attachment: fixed;
+  color: #09090b;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Minimalist Clean App Card Canvas */
+.app-canvas {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.06), 0 0 1px 1px rgba(0, 0, 0, 0.03);
+}
+
+/* Minimalist Glass & Elevation */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.glass-panel-dark {
+  background: rgba(10, 10, 12, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Arch Shape Container (Matching user uploaded layout) */
+.arch-container {
+  border-top-right-radius: 140px;
+  border-top-left-radius: 28px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+
+/* Subtle Monochrome Dot Pattern */
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.14) 1.25px, transparent 1.25px);
+  background-size: 22px 22px;
+}
+
+/* Smooth Minimalist Keyframe Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.4deg);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(15px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 4s ease-in-out infinite;
+}
+
+.animate-drift {
+  animation: drift 14s ease-in-out infinite;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f5f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* ==========================================================================
+   UI REFINEMENT: Native @media print Clean Resume Stylesheet
+   Formats portfolio pages into an impeccably formatted ATS-ready physical resume
+   ========================================================================== */
+@media print {
+  @page {
+    margin: 1.25cm;
+    size: letter portrait;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #09090b !important;
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Hide interactive web chrome, floating docks, terminals, audio player controls, modals */
+  nav,
+  footer,
+  aside,
+  button,
+  .print\:hidden,
+  [aria-label="Candidate Quick Action Dock"],
+  [aria-label="Terminal CLI Trigger"],
+  [aria-label="Developer Terminal"],
+  [role="dialog"],
+  #contact form,
+  .animate-pulse,
+  .animate-float {
+    display: none !important;
+  }
+
+  /* Remove shadows and excessive borders for crisp laser printing */
+  .shadow-xs,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg,
+  .shadow-xl,
+  .shadow-2xl {
+    box-shadow: none !important;
+  }
+
+  .border,
+  .border-slate-200 {
+    border-color: #e2e8f0 !important;
+  }
+
+  /* Page break rules */
+  .break-inside-avoid,
+  section,
+  article {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Ensure text colors are high-contrast black/grey */
+  h1, h2, h3, h4 {
+    color: #000000 !important;
+  }
+
+  p, span, div {
+    color: #18181b !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000000 !important;
+  }
+}
