@@ -1,29 +1,29 @@
-# CloudFolio ☁️
+# CloudFolio ☁️⚡
 
-**CloudFolio** is a modern, interactive student and developer portfolio platform built with Next.js, React, Tailwind CSS, and TypeScript. It features interactive architecture diagrams, PR diff viewers, terminal simulation, recruiter story mode, and ATS resume generation.
+> **Next-Generation, Cloud-Native Developer & Student Portfolio Engine**
 
----
-
-## ✨ Features
-
-- **Candidate Showcase & Portfolios**: Dynamic public portfolio routes with verified student credentials, stats, and project showcases.
-- **Interactive Architecture Diagrams**: Live systems design with simulated traffic and service interactions.
-- **Landmark PR Viewer**: Review architectural decisions and code diffs.
-- **Developer Terminal**: Built-in interactive CLI terminal (`cloudfolio-sh`).
-- **Story Mode**: 60-second high-speed recruiter walkthrough.
-- **ATS Resume Generator**: 1-click ATS resume preview and download.
-- **Studio Dashboard**: Manage projects, skills, profile, and security settings.
+**CloudFolio** is a cloud-native, high-performance developer and student portfolio platform architected for modern cloud systems engineers, software architects, and tech talent. Built on Next.js, React, Tailwind CSS, and TypeScript, CloudFolio empowers developers to showcase their engineering identity through interactive distributed system designs, live cloud traffic simulations, automated AI architecture audits, and serverless edge delivery.
 
 ---
 
-## 🚀 Getting Started
+## ☁️ Cloud-First Features
 
-### Prerequisites
+- **🌐 Cloud-Native Portfolio Instances**: Dynamic, globally distributed public candidate portfolios with verified credentials, engagement telemetry, and cloud engineering showcases.
+- **⚡ Interactive Cloud Architecture & Traffic Simulator**: Visualize multi-tier distributed systems with real-time simulated network traffic, microservice nodes, caching layers, and load balancing.
+- **🤖 AI Cloud Architecture Auditor**: Automated system design reviews, resilience analysis, and cloud cost/performance optimization insights powered by Google Gemini.
+- **🔀 Landmark PR & Infrastructure Diff Viewer**: Highlight production pull requests, distributed systems PRs, and infrastructure-as-code diffs with monochrome syntax highlighting.
+- **💻 Edge-Ready Cloud CLI Terminal**: Built-in interactive browser terminal (`cloudfolio-sh`) simulating cloud infrastructure commands, status health checks, and developer workflows.
+- **⚡ 60-Second Recruiter Story Mode**: High-velocity visual walkthrough designed for cloud engineering recruiters and tech leads.
+- **📄 Instant ATS Resume Engine**: Real-time markdown resume generation, formatted and optimized for automated candidate tracking pipelines.
+- **🎛️ Cloud Studio Control Plane**: Centralized dashboard to orchestrate profile data, purge edge CDN caches, configure custom domain CNAME records, and trigger cloud backups.
 
-- [Node.js](https://nodejs.org/) (v18 or newer recommended)
-- `npm` or `yarn`
+---
 
-### Installation
+## 🚀 Cloud Deployment & Quickstart
+
+CloudFolio is optimized for instant deployment across modern cloud platforms like **Vercel**, **AWS Amplify**, **GCP Cloud Run**, or containerized Docker clusters.
+
+### Local Development
 
 1. **Clone the repository:**
    ```bash
@@ -36,32 +36,33 @@
    npm install
    ```
 
-3. **Set up environment variables:**
+3. **Configure Environment Variables:**
    ```bash
    cp .env.example .env.local
    ```
-   Add your API keys in `.env.local` if needed (e.g. `GEMINI_API_KEY`).
+   Add your cloud API keys in `.env.local` (e.g. `GEMINI_API_KEY`).
 
-4. **Run the development server:**
+4. **Launch the development server:**
    ```bash
    npm run dev
    ```
 
-5. **Open the browser:**
-   Visit [http://localhost:3000](http://localhost:3000) to view the application.
+5. **Access the application:**
+   Navigate to [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Modern Cloud Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **UI & Styling**: [React 19](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/), [Lucide React](https://lucide.dev/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Animations & Effects**: [canvas-confetti](https://www.npmjs.com/package/canvas-confetti)
-- **Backend / DB**: Next.js API Routes & JSON File Database
+- **Application Framework**: [Next.js](https://nextjs.org/) (App Router, Server Components & Dynamic Edge Routes)
+- **Frontend & Design System**: [React 19](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/), [Lucide React](https://lucide.dev/)
+- **Programming Language**: [TypeScript](https://www.typescriptlang.org/) (Strict Mode)
+- **AI Cloud Engine**: [Google Gemini 2.0 Flash](https://ai.google.dev/) (Architecture audits, candidate summaries)
+- **Visuals & Telemetry**: Interactive Canvas & Vector SVG Architecture Graphs
+- **Persistence & Storage**: Next.js Serverless API Handlers & Lightweight JSON Data Engine
 
 ---
 
 ## 📄 License
 
-MIT
+Distributed under the [MIT License](LICENSE).

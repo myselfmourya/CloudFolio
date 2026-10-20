@@ -1,6 +1,7 @@
 {
   "name": "cloudfolio",
   "version": "0.1.0",
+  "description": "A cloud-native, interactive developer & student portfolio platform with distributed architecture simulation and serverless edge deployment.",
   "private": true,
   "scripts": {
     "dev": "node scripts/build-css.js && next dev",
